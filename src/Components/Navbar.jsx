@@ -1,9 +1,10 @@
 import './Navbar.css'
 import { LoginIcon, LogoutIcon, MenuIcon, XLargeIcon } from './Icons'
 import { useEffect, useState } from 'react'
+import { BASE, INSCRIPCION, LOGIN, NOVEDADES } from './constants'
 
 export default function Navbar() {
-  const [path, setPath] = useState('/unnoba-deportes')
+  const [path, setPath] = useState(BASE)
   const [navbarActive, setNavbarActive] = useState(false)
 
   const name = localStorage.getItem('name')
@@ -26,18 +27,16 @@ export default function Navbar() {
   }, [navbarActive])
 
   const activeLink = (link) => {
-    if (path === '/unnoba-deportes' && link === 'inicio') return 'disabled'
-    if (path === '/unnoba-deportes/novedades' && link === 'novedades')
-      return 'disabled'
-    if (path === '/unnoba-deportes/inscripcion' && link === 'inscripcion')
-      return 'disabled'
+    if (path === BASE && link === 'inicio') return 'disabled'
+    if (path === NOVEDADES && link === 'novedades') return 'disabled'
+    if (path === INSCRIPCION && link === 'inscripcion') return 'disabled'
   }
 
   return (
     <>
       <header>
         <div className="navDiv">
-          <a href="/unnoba-deportes">
+          <a href={BASE}>
             <h1>UNNOBA Deportes</h1>
           </a>
 
@@ -50,7 +49,7 @@ export default function Navbar() {
                 </button>
               </div>
             ) : (
-              <a href="/unnoba-deportes/login">
+              <a href={LOGIN}>
                 <button className="loginButton">
                   Iniciar sesión <LoginIcon />
                 </button>
@@ -82,23 +81,17 @@ export default function Navbar() {
             Bienvenido {name}
           </li>
           <li>
-            <a href="/unnoba-deportes" className={activeLink('inicio')}>
+            <a href={BASE} className={activeLink('inicio')}>
               Inicio
             </a>
           </li>
           <li>
-            <a
-              href="/unnoba-deportes/novedades"
-              className={activeLink('novedades')}
-            >
+            <a href={NOVEDADES} className={activeLink('novedades')}>
               Novedades
             </a>
           </li>
           <li>
-            <a
-              href="/unnoba-deportes/inscripcion"
-              className={activeLink('inscripcion')}
-            >
+            <a href={INSCRIPCION} className={activeLink('inscripcion')}>
               Inscripción
             </a>
           </li>
@@ -108,7 +101,7 @@ export default function Navbar() {
                 Cerrar sesión
               </button>
             ) : (
-              <a href="/unnoba-deportes/login">Iniciar sesión</a>
+              <a href={LOGIN}>Iniciar sesión</a>
             )}
           </li>
         </ul>

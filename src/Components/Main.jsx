@@ -2,13 +2,14 @@ import './Main.css'
 import SectionCard from './SectionCard'
 import imgNovedades from '../assets/novedades.webp'
 import imgInscripcion from '../assets/inscripcion.webp'
+import { INSCRIPCION, NOVEDADES } from './constants'
 
 export default function Main() {
   return (
     <main>
       <SectionCard
         title="¡Novedades!"
-        link="/unnoba-deportes/novedades"
+        link={NOVEDADES}
         button="Ve las novedades"
         img={imgNovedades}
         imgAlt="Imagen alusiva a 'Novedades'"
@@ -17,7 +18,7 @@ export default function Main() {
       </SectionCard>
       <SectionCard
         title="Inscripciones"
-        link="/unnoba-deportes/inscripcion"
+        link={INSCRIPCION}
         button="¡Inscríbete!"
         img={imgInscripcion}
         imgAlt="Imagen alusiva a 'Inscripciones'"

@@ -2,6 +2,7 @@ import './Login.css'
 import { useState } from 'react'
 import { users } from '../mocks/users.json'
 import { AlertIcon, LoginIcon } from './Icons'
+import { BASE } from './constants'
 
 export default function Login() {
   const [user, setUser] = useState({ name: '', email: '', password: '' })
@@ -21,7 +22,7 @@ export default function Login() {
         if (dbUser.password === user.password) {
           localStorage.setItem('name', dbUser.name)
           localStorage.setItem('email', dbUser.email)
-          window.location.pathname = '/unnoba-deportes'
+          window.location.pathname = BASE
         }
       }
     })
@@ -53,7 +54,7 @@ export default function Login() {
           />
 
           <div className="formButtonsDiv">
-            <a href="/unnoba-deportes">
+            <a href={BASE}>
               <button className="cancel" type="button">
                 Cancelar <AlertIcon />
               </button>

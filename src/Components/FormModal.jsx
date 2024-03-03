@@ -1,10 +1,11 @@
 import './FormModal.css'
 import { CloseIcon } from './Icons'
+import { BASE } from './constants'
 
 export default function FormModal({ newInscription }) {
   return (
     <div className="formModal">
-      <a href="/unnoba-deportes">
+      <a href={BASE}>
         <CloseIcon />
       </a>
 

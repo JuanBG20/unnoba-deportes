@@ -1,6 +1,8 @@
 import './App.css'
 import { lazy, useEffect, useState } from 'react'
 
+import { BASE, NOVEDADES, INSCRIPCION, LOGIN } from './Components/constants'
+
 const Navbar = lazy(() => import('./Components/Navbar'))
 const Main = lazy(() => import('./Components/Main'))
 const Footer = lazy(() => import('./Components/Footer'))
@@ -9,13 +11,13 @@ const Login = lazy(() => import('./Components/Login'))
 const Novedades = lazy(() => import('./Components/Novedades'))
 
 function App() {
-  const [path, setPath] = useState('/unnoba-deportes')
+  const [path, setPath] = useState('/')
 
   useEffect(() => setPath(window.location.pathname), [])
 
   const pageSelector = () => {
     switch (path) {
-      case '/unnoba-deportes': {
+      case BASE: {
         return (
           <>
             <Navbar />
@@ -25,7 +27,7 @@ function App() {
         )
       }
 
-      case '/unnoba-deportes/novedades': {
+      case NOVEDADES: {
         return (
           <>
             <Navbar />
@@ -35,7 +37,7 @@ function App() {
         )
       }
 
-      case '/unnoba-deportes/inscripcion': {
+      case INSCRIPCION: {
         return (
           <>
             <Navbar />
@@ -45,7 +47,7 @@ function App() {
         )
       }
 
-      case '/unnoba-deportes/login': {
+      case LOGIN: {
         return <Login />
       }
 
