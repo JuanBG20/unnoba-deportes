@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/novedades", "destination": "/" },
-    { "source": "/inscripciones", "destination": "/" },
+    { "source": "/inscripcion", "destination": "/" },
     { "source": "/login", "destination": "/" }
   ]
 }
