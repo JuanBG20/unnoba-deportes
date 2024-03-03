@@ -1,14 +1,14 @@
 import './App.css'
-import { lazy, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { BASE, NOVEDADES, INSCRIPCION, LOGIN } from './Components/constants'
 
-const Navbar = lazy(() => import('./Components/Navbar'))
-const Main = lazy(() => import('./Components/Main'))
-const Footer = lazy(() => import('./Components/Footer'))
-const Form = lazy(() => import('./Components/Form'))
-const Login = lazy(() => import('./Components/Login'))
-const Novedades = lazy(() => import('./Components/Novedades'))
+import Navbar from './Components/Navbar'
+import Main from './Components/Main'
+import Footer from './Components/Footer'
+import Form from './Components/Form'
+import Login from './Components/Login'
+import Novedades from './Components/Novedades'
 
 function App() {
   const [path, setPath] = useState('/')
