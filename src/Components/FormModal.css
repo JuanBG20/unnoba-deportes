@@ -1,0 +1,25 @@
+.formModal {
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+  width: 25rem;
+}
+
+.formModal h2 {
+  text-align: center;
+}
+
+.formModal h3 {
+  text-align: center;
+  color: var(--color-border);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.formModalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

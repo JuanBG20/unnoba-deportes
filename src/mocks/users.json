@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "Juan Bautista Galván",
+      "email": "juanbgalvan.19@gmail.com",
+      "password": "1234"
+    },
+    {
+      "name": "Emiliano Salvo",
+      "email": "emiliano@gmail.com",
+      "password": "5678"
+    },
+    {
+      "name": "Gustavo Segura",
+      "email": "gustavo@gmail.com",
+      "password": "2024"
+    }
+  ]
+}

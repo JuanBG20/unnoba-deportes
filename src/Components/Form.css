@@ -1,0 +1,38 @@
+.d-none {
+  display: none;
+}
+
+.form {
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.5);
+  width: 25rem;
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+form input,
+form select {
+  padding: 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+form button {
+  margin-top: 1rem;
+}
